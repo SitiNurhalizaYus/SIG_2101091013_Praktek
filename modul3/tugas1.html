@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Menampilkan tooltip pada sebuah marker</title>
+        <link rel="stylesheet" type="text/css" href="../leaflet/leaflet.css"/>
+        <script type="text/javascript" src="../leaflet/leaflet.js"></script>
+    </head>
+<body>
+    <div id="map_pertama" style="width: 100%; height: 600px;"></div>
+</body>
+<script type="text/javascript">
+
+        var myMap = L.map('map_pertama'). setView([-0.9243208769469531, 100.36247176394912],15);//kota padang
+
+        var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(myMap);
+
+     L.marker([-0.9243208769469531, 100.36247176394912]).bindTooltip("Mesjid Raya Sumatera Barat").addTo(myMap);
+     L.marker([-0.9375940171064687, 100.36044269997706]).bindTooltip("Kantor Gubenur Sumatera Barat").addTo(myMap);
+
+</script>
+</html>
