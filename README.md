@@ -1,13 +1,13 @@
 # SIG_2101091013 Praktek
 Tutorial Latihan :
 - [Modul 1](README.md#modul-1) Maps API
-- [Modul 2](README.md#modul-2)
+- [Modul 2](README.md#modul-2) Marker (Vector Point)
 - [Modul 3](README.md#modul-3)
 - [Modul 4](README.md#modul-4)
 - [Modul 5](README.md#modul-5)
 
 ## Modul 1
-# Maps API
+# `Maps API` 
 ## Tugas 1 : Lakukan Proses Instalasi
 **Langkah 1** : Download dokumnentasi Leaftjs pada alamat  (https://leafletjs.com/reference-1.7.1.html) dan PostGIS pda alamat
 (https://postgis.net/stuff/postgis-3.0.pdf)
@@ -98,7 +98,7 @@ Berikut hasil dari baris kode pada browser:
 ![M1_1](https://user-images.githubusercontent.com/114122090/195171963-ccf578c7-d345-47f7-9c90-74ceec6a007d.png)
 
 ## Modul 2
-# Marker (Vector Point)
+# `Marker (Vector Point)`
 ## Tugas 1 : Tampilkan marker pada sebuah peta
 **Langkah 1** : Buatlah 1 buah file html dengan nama peta2 .html
 ```html
@@ -129,37 +129,41 @@ Berikut hasil dari baris kode pada browser:
     var mymap = L.map('mapku').setView([-0.9142997125961476,100.46607589539128], 13);
 
     var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	maxZoom: 19,
-	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(mymap);
-   </head>
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(mymap);
 </script>
 </html>
 ```
 
+**Langkah 3** : Tambahkan marker dengan menggunakan fungsi marker(lat, lng) kedalam peta. Pada fungsi marker dapat diisi 2 parameter yaitu latitude dan longitude.
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-<title>marker</title>
-<link rel="stylesheet" href="../leaflet/leaflet.css"/>
-<script src="../leaflet/leaflet.js"></script>
-</head>
+    <head>
+    <title>marker</title>
+    <link rel="stylesheet" href="../leaflet/leaflet.css"/>
+    <script src="../leaflet/leaflet.js"></script>
+    </head>
 <body>
-<div id="mapku" style="width: 100%; height: 600px;"></div>
+    <div id="mapku" style="width: 100%; height: 600px;"></div>
 </body>
 <script type="text/javascript">
-var mymap = L.map('mapku').setView([-0.9142997125961476,100.46607589539128], 13);
+    var mymap = L.map('mapku').setView([-0.9142997125961476,100.46607589539128], 13);
 
-var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	maxZoom: 19,
-	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(mymap);
+    var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(mymap);
 
-L.marker([-0.9142997125961476,100.46607589539128]).addTo(mymap);
+    L.marker([-0.9142997125961476,100.46607589539128]).addTo(mymap);
 </script>  
 </html>
 ```
+
+**Langkah 4** :Jalankan peta dengan melakukan double click file peta2.html
+![m2_1](https://user-images.githubusercontent.com/114122090/195177821-22aabe46-c906-4efb-b148-9e68e04395ba.png)
+
 ##
 ##
 
