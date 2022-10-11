@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hotel di Padang</title>
+        <link rel="stylesheet" type="text/css" href="leaflet/leaflet.css"/>
+        <script type="text/javascript" src="leaflet/leaflet.js"></script>
+    </head>
+<body>
+    <div id="map_pertama" style="width: 100%; height: 600px;"></div>
+</body>
+<script type="text/javascript">
+    var myMap = L.map('map_pertama'). setView([-0.9243208769469531, 100.36247176394912],15);//kota padang
+
+    var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(myMap);
+    
+    var info_masjid_raya = '<p style="text-align: center;"><b>Mesjid Raya Sumbar</b><br><iframe width="300px" height="200px" src="https://www.youtube.com/embed/aqW5KASLztQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p><p>Masjid Raya Sumatra Barat adalah masjid tanpa kubah. Atap menjadi berupa khas rumah adat Minang serta terdapat ukiran-ukiran pada dinding. Masyarakat Sumatera Barat terkenal dengan pepatah Adat basandi syarak, syarak basandi Kitabullah, yang artinya adat bersandikan kepada agama, dan agama bersandikan kitabullah (Al-Quran). Hal itulah yang tercemin dalam Mesjid Raya Sumatera Barat. <a href="https://travel.detik.com/domestic-destination/d-6178766/eksplor-pesona-sumatra-barat-yuk-cuma-rp-2-jutaan">Baca Selengkapnya</a></p>';
+
+    var myLocation = [
+        [-0.953224, 100.359346 , 'Hotel Bunda', 'Info_hotel1'],
+        [-0.953497, 100.359812 , 'Hotel Bundo Kanduang', 'Info_hotel2'],
+        [-0.95464, 100.359185 , 'Hotel Aksana', 'Info_hotel3'],
+        [-0.955015, 100.358796 , 'Hotel Kriyad', 'Info_hotel4'],
+        [-0.9553, 100.35801 , 'Hotel Mariani', 'Info_hotel5'],
+        [-0.955699, 100.358694, 'Hotel Bumi Minang', 'Info_hotel6'],
+        [-0.956504, 100.356714 , 'Hotel Grand Inna Muara', 'Info_hotel7'],
+        [-0.958759, 100.355301 , 'Hotel HW', 'Info_hotel8'],
+        [-0.957327, 100.355312 , 'Hotel Deivan', 'Info_hotel9'],
+        [-0.956828, 100.35414    , 'Hotel Mongonsidi', 'Info_hotel10'],
+    
+    ]; //Array dari lokasi kita
+
+    //selanjutnya kita tampilkan dengan perulangan for
+    var Leaflcon = L.Icon.extend({
+        options:{
+            iconSize:[40,60]
+        } 
+    });
+
+    var hotelicon = new Leaflcon({iconUrl: 'images/hotel.png'})
+
+    for (var i = 0; i < myLocation.length; i++) {
+        markerMaps = new L.marker([myLocation[i][0], myLocation[i][1]],{icon: hotelicon}).addTo(myMap).bindTooltip(myLocation[i][2]).bindPopup(myLocation[i][3]);
+    }     
+
+</script>
+</html>
