@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tampilkan 2 jalan masuk ke Politeknik Negeri Padang</title>
+        <link rel="stylesheet" type="text/css" href="../leaflet/leaflet.css"/>
+        <script type="text/javascript" src="../leaflet/leaflet.js"></script>
+    </head>
+<body>
+    <div id="map_pertama" style="width: 100%; height: 600px;"></div>
+</body>
+<script type="text/javascript">
+    var myMap = L.map('map_pertama'). setView([-0.9243208769469531, 100.36247176394912],15);//kota padang
+
+    var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(myMap);
+
+    var duajalankepoli = [
+        //array kordinate jalan petama
+        [
+            [-0.923044, 100.448551],
+            [-0.921064, 100.451353],
+            [-0.917667, 100.455348],
+            [-0.907876, 100.461421],
+            [-0.906810, 100.463411],
+            [-0.912420, 100.468700],
+        ],
+
+        //array kordinate jalan kedua
+        [
+            [-0.922995, 100.448551],
+            [-0.919171, 100.453870],
+            [-0.919893, 100.454592],
+            [-0.918466, 100.457799],
+            [-0.917946, 100.461660],
+            [-0.914660, 100.462959],
+            [-0.914952, 100.467663],
+            [-0.914062, 100.467728],
+        ]
+    ];
+
+L.polyline(duajalankepoli).addTo(myMap);
+
+L.marker([-0.907876, 100.461421])
+    .bindTooltip("<b>Jalan Terjauh</b> <br> Jarak 7 KM")
+    .addTo(myMap); //pop disalah satu line
+
+L.marker([-0.914660, 100.462959])
+    .bindTooltip("<b>Jalan Tercepat</b> <br> Jarak 4 KM")
+    .addTo(myMap); //pop disalah satu line
+
+</script>
+</html>
