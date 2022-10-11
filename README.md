@@ -29,7 +29,7 @@ Leaflet.css merupakan code stylesheet atau sebagai tampilan/ desain map. Sedangk
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Peta Pertamaku</title>
+     <title>Peta Pertamaku</title>
 </head>
 <body>
 
@@ -57,15 +57,15 @@ Leaflet.css merupakan code stylesheet atau sebagai tampilan/ desain map. Sedangk
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Peta Pertamaku</title>
-  <link rel="stylesheet" href="../leaflet/leaflet.css"/>
-  <script src="../leaflet/leaflet.js"></script>
+    <title>Peta Pertamaku</title>
+    <link rel="stylesheet" href="../leaflet/leaflet.css"/>
+    <script src="../leaflet/leaflet.js"></script>
 </head>
 <body>
-  <div id="mapku" style="width: 100%; height: 600px;"></div>
+    <div id="mapku" style="width: 100%; height: 600px;"></div>
 </body>
 <script type="text/javascript">
-  var mymap = L.map('mapku').setView([-0.9142997125961476,100.46607589539128], 13);
+    var mymap = L.map('mapku').setView([-0.9142997125961476,100.46607589539128], 13);
 </script>
 </html>
 ```
@@ -75,19 +75,19 @@ Leaflet.css merupakan code stylesheet atau sebagai tampilan/ desain map. Sedangk
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Peta Pertamaku</title>
-  <link rel="stylesheet" href="../leaflet/leaflet.css"/>
-  <script src="../leaflet/leaflet.js"></script>
+     <title>Peta Pertamaku</title>
+     <link rel="stylesheet" href="../leaflet/leaflet.css"/>
+     <script src="../leaflet/leaflet.js"></script>
 </head>
 <body>
-  <div id="mapku" style="width: 100%; height: 600px;"></div>
+     <div id="mapku" style="width: 100%; height: 600px;"></div>
 </body>
 <script type="text/javascript">
-  var mymap = L.map('mapku').setView([-0.9142997125961476,100.46607589539128], 13);
-  var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	maxZoom: 19,
-	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-	}).addTo(mymap);
+     var mymap = L.map('mapku').setView([-0.9142997125961476,100.46607589539128], 13);
+     var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+     maxZoom: 19,
+     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+     }).addTo(mymap);
 </script>
 </html>
 ```
