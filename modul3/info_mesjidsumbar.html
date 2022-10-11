@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tampilkan Multi Tooltip atau Popup menggunakan array data</title>
+        <link rel="stylesheet" type="text/css" href="../leaflet/leaflet.css"/>
+        <script type="text/javascript" src="../leaflet/leaflet.js"></script>
+    </head>
+<body>
+    <div id="map_pertama" style="width: 100%; height: 600px;"></div>
+</body>
+<script type="text/javascript">
+    var myMap = L.map('map_pertama'). setView([-0.9243208769469531, 100.36247176394912],15);//kota padang
+
+    var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(myMap);
+    
+    var info_masjid_raya = '<p style="text-align: center;"><b>Mesjid Raya Sumbar</b><br><iframe width="300px" height="200px" src="https://www.youtube.com/embed/aqW5KASLztQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p><p>Masjid Raya Sumatra Barat adalah masjid tanpa kubah. Atap menjadi berupa khas rumah adat Minang serta terdapat ukiran-ukiran pada dinding. Masyarakat Sumatera Barat terkenal dengan pepatah Adat basandi syarak, syarak basandi Kitabullah, yang artinya adat bersandikan kepada agama, dan agama bersandikan kitabullah (Al-Quran). Hal itulah yang tercemin dalam Mesjid Raya Sumatera Barat. <a href="https://travel.detik.com/domestic-destination/d-6178766/eksplor-pesona-sumatra-barat-yuk-cuma-rp-2-jutaan">Baca Selengkapnya</a></p>';
+
+    var myLocation = [
+        [-0.9243208769469531 , 100.36247176394912 , 'Masjid Raya Sumbar', info_masjid_raya],
+        [-0.9375940171064687 , 100.36044269997706 , 'Kantor Gubernur Sumbar', 'Informasi Tentang Kantor Gubernur Sumbar'],
+        [-0.8710549648245872 , 100.3884024702207 , 'Kantor Walikota Padang', 'Informasi Tentang Kantor Walikota Padang'],
+        [-0.9142997125961476 , 100.46607589539128 ,'Politeknik Negeri Padang','Informasi Tentang PNP'],
+    ]; //Array dari lokasi kita
+
+    //selanjutnya kita tampilkan dengan perulangan for
+    for (var i = 0; i < myLocation.length; i++) {
+        markerMaps = new L.marker([myLocation[i][0], myLocation[i][1]]).addTo(myMap).bindTooltip(myLocation[i][2]).bindPopup(myLocation[i][3]);
+    }     
+
+    var Leaflcon = L.Icon.extend({
+        options:{
+            iconSize:[50,50]
+        }
+    });
+
+    var mesjidicon = new Leaflcon({iconUrl: 'images/mesjid.png'})
+    L.marker([-0.9243208769469531, 100.36247176394912],{icon: mesjidicon}).bindTooltip("Mesjid Raya Sumatera Barat").bindPopup(info_masjid_raya).addTo(myMap);
+
+</script>
+</html>
