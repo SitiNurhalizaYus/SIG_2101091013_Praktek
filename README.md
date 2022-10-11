@@ -444,7 +444,7 @@ Berikut hasil dari baris kode pada browser:
 ![m3_3](https://user-images.githubusercontent.com/114122090/195184701-28f48135-5210-4205-a448-efbc43df037e.png)
 	
 ## Modul 4
-# 'Polyline (Vector Garis)'
+# `Polyline (Vector Garis)`
 ## Tugas 1 : Tampilkan jalan masuk ke Politeknik Negeri Padang
 **Langkah 1** : Buatlah 1 buah file html dengan nama line .html. Siapkan peta dasar dengan center view Kampus Politeknik Negeri Padang
 ```html
@@ -506,7 +506,7 @@ Berikut hasil dari baris kode pada browser:
 **Langkah 3** : Buka file tersebut pada browser untuk melihat hasilnya
 ![m4_1](https://user-images.githubusercontent.com/114122090/195186453-cbf89b56-709c-49df-8ce1-9cf5f6d63bf9.png)
 
-## Tugas 2: Tampilkan 2 jalan masuk ke Politeknik Negeri Padang
+## Tugas 2 : Tampilkan 2 jalan masuk ke Politeknik Negeri Padang
 **Langkah 1** : Buatlah 1 buah file html dengan nama line .html. Siapkan peta dasar dengan center view Kampus Politeknik Negeri Padang.
 ```html
 <!DOCTYPE html>
@@ -591,7 +591,7 @@ Berikut hasil dari baris kode pada browser:
 ![m4_2](https://user-images.githubusercontent.com/114122090/195186741-f746fcb8-145c-4bdc-ab2b-c7e899c68e7a.png)
 
 ## Modul 5
-# 'Polygon'
+# `Polygon`
 ## Tugas 1 : Kawasan Politeknik Negeri Padang
 **Langkah 1** : Buatlah 1 buah file html dengan nama polygon.html. Siapkan peta dasar dengan center view Kampus Politeknik Negeri Padang.
 ```html
@@ -659,7 +659,7 @@ Berikut hasil dari baris kode pada browser:
 ![m5_1](https://user-images.githubusercontent.com/114122090/195187086-50b3e192-f466-4449-a1c8-4e0b9ab8860d.png)
 
 ## Tugas 2 : Menampilkan 2 atau lebih Kawasan
-**Langkah 1: Buatlah 1 buah file html dengan nama multipolygon.html. Siapkan peta dasar dengan center view Kampus Politeknik Negeri Padang.
+**Langkah 1** : Buatlah 1 buah file html dengan nama multipolygon.html. Siapkan peta dasar dengan center view Kampus Politeknik Negeri Padang.
 ```html
 <!DOCTYPE html>
 <html lang="en">
