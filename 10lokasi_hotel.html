@@ -9,33 +9,106 @@
     <div id="map_pertama" style="width: 100%; height: 600px;"></div>
 </body>
 <script type="text/javascript">
-    var myMap = L.map('map_pertama'). setView([-0.9243208769469531, 100.36247176394912],15);//kota padang
+    var myMap = L.map('map_pertama'). setView([-0.957741, 100.358522],15);//kota padang
 
     var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(myMap);
     
-    var info_masjid_raya = '<p style="text-align: center;"><b>Mesjid Raya Sumbar</b><br><iframe width="300px" height="200px" src="https://www.youtube.com/embed/aqW5KASLztQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p><p>Masjid Raya Sumatra Barat adalah masjid tanpa kubah. Atap menjadi berupa khas rumah adat Minang serta terdapat ukiran-ukiran pada dinding. Masyarakat Sumatera Barat terkenal dengan pepatah Adat basandi syarak, syarak basandi Kitabullah, yang artinya adat bersandikan kepada agama, dan agama bersandikan kitabullah (Al-Quran). Hal itulah yang tercemin dalam Mesjid Raya Sumatera Barat. <a href="https://travel.detik.com/domestic-destination/d-6178766/eksplor-pesona-sumatra-barat-yuk-cuma-rp-2-jutaan">Baca Selengkapnya</a></p>';
-
+    var Info_hotel1 = '<p style="text-align: center;"><b>Hotel Bunda</b><img src="images/hotel1.jpg" width="300px" height="200px"/></p>';
+    var Info_hotel2 = '<p style="text-align: center;"><b>Hotel Bundo Kanduang</b><img src="images/hotel2.jpg" width="300px" height="200px"/></p>';
+    var Info_hotel1 = '<p style="text-align: center;"><b>Hotel Bunda</b><img src="images/hotel3.jpg" width="300px" height="200px"/></p>';
+    var Info_hotel1 = '<p style="text-align: center;"><b>Hotel Bunda</b><img src="images/hotel4.jpg" width="300px" height="200px"/></p>';
+    var Info_hotel1 = '<p style="text-align: center;"><b>Hotel Bunda</b><img src="images/hotel5.jpg" width="300px" height="200px"/></p>';
+    var Info_hotel1 = '<p style="text-align: center;"><b>Hotel Bunda</b><img src="images/hotel6.jpg" width="300px" height="200px"/></p>';
+    var Info_hotel1 = '<p style="text-align: center;"><b>Hotel Bunda</b><img src="images/hotel7.jpg" width="300px" height="200px"/></p>';
     var myLocation = [
         [-0.953224, 100.359346 , 'Hotel Bunda', 'Info_hotel1'],
         [-0.953497, 100.359812 , 'Hotel Bundo Kanduang', 'Info_hotel2'],
-        [-0.95464, 100.359185 , 'Hotel Aksana', 'Info_hotel3'],
-        [-0.955015, 100.358796 , 'Hotel Kriyad', 'Info_hotel4'],
-        [-0.9553, 100.35801 , 'Hotel Mariani', 'Info_hotel5'],
-        [-0.955699, 100.358694, 'Hotel Bumi Minang', 'Info_hotel6'],
-        [-0.956504, 100.356714 , 'Hotel Grand Inna Muara', 'Info_hotel7'],
-        [-0.958759, 100.355301 , 'Hotel HW', 'Info_hotel8'],
-        [-0.957327, 100.355312 , 'Hotel Deivan', 'Info_hotel9'],
-        [-0.956828, 100.35414    , 'Hotel Mongonsidi', 'Info_hotel10'],
+        [-0.95464, 100.359185 , 'Hotel Aksana', 'Info_hotel3'],        
+        [-0.9553, 100.35801 , 'Hotel Mariani', 'Info_hotel4'],
+        [-0.955699, 100.358694 , 'Hotel Bumi Minang', 'Info_hotel5'],
+        [-0.956504, 100.356714 , 'Hotel Grand Inna Muara', 'Info_hotel6'],
+        [-0.958759, 100.355301 , 'Hotel HW', 'Info_hotel7'],
+        [-0.957327, 100.355312 , 'Hotel Deivan', 'Info_hotel8'],
+        [-0.956828, 100.35414 , 'Hotel Mongonsidi', 'Info_hotel9'],
+        [-0.959894, 100.354397 , 'Hotel Plan B', 'Info_hotel10'],
     
     ]; //Array dari lokasi kita
 
+    var jalan = [
+        //array kordinate jalan 
+        [
+            [-0.959888, 100.354279],
+            [-0.959816, 100.35415],
+            [-0.958043, 100.355363],
+            [-0.957585, 100.355559], 
+        ],        
+        [
+            [-0.958912, 100.355333], 
+            [-0.959038, 100.355448], 
+            [-0.958362, 100.356245],
+            [-0.958234, 100.356232],
+            [-0.957585, 100.355559],
+            [-0.957319, 100.35573],
+            [-0.957231, 100.355435],  
+            [-0.957365, 100.355347],
+        ],
+        [
+            [-0.957231, 100.355435], 
+            [-0.956624, 100.355398],
+            [-0.956938, 100.35415], 
+            [-0.956882, 100.354129],
+                        
+        ],
+        [   [-0.957585, 100.355559],
+            [-0.957121, 100.355859],
+            [-0.956952, 100.356001],
+            [-0.956423, 100.356618],
+            [-0.95648, 100.356698],
+        ],
+        [
+            [-0.956423, 100.356618],
+            [-0.955954, 100.357364],
+            [-0.95578, 100.357801],  
+            [-0.955522, 100.358152],
+            [-0.955391, 100.358042],
+        ],
+        [
+            [-0.955522, 100.358152],
+            [-0.955554, 100.358244],
+            [-0.955522, 100.358316],
+            [-0.955383, 100.358442],
+            [-0.955377, 100.358574],
+        ],
+        [
+            [-0.955522, 100.358152],
+            [-0.954554, 100.358737],
+            [-0.954318, 100.358968],
+            [-0.954492, 100.359086],
+        ],
+        [
+            [-0.954318, 100.358968],
+            [-0.954197, 100.359053],
+            [-0.954061, 100.359196],
+            [-0.954012, 100.359281],
+            [-0.953433, 100.359609],
+            [-0.953503, 100.35974],
+        ],
+        [
+            [-0.953433, 100.359609],
+            [-0.953312, 100.35966],
+            [-0.953264, 100.35948],
+        ]
+    ];
+
+    L.polyline(jalan).addTo(myMap);
+    
     //selanjutnya kita tampilkan dengan perulangan for
     var Leaflcon = L.Icon.extend({
         options:{
-            iconSize:[40,60]
+            iconSize:[30,50]
         } 
     });
 
