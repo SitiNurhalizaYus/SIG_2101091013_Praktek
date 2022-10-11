@@ -12,7 +12,7 @@ Tutorial Latihan :
 **Langkah 1** : Download dokumnentasi Leaftjs pada alamat  (https://leafletjs.com/reference-1.7.1.html) dan PostGIS pda alamat
 (https://postgis.net/stuff/postgis-3.0.pdf)
 
-**Langkah 2** : Download text editor Sublime Text pada alamat https://www.sublimetext.com/3 atau Visual Code pada alamat (https://code.visualstudio.com/download)
+**Langkah 2** : Download text editor Sublime Text pada alamat (https://www.sublimetext.com/3) atau Visual Code pada alamat (https://code.visualstudio.com/download)
 
 **Langkah 3** : Lakukan registrasi untuk mendapatkan private map API KEY di (https://account.mapbox.com/) . Fungsi dari private API KEY ini adalah sebagai kunci anda untuk customisasi peta pada domain atau aplikasi tertentu. Contoh API Key adalah (pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N 
 3gifQ.rJcFIG214AriISLbB6B5aw)
