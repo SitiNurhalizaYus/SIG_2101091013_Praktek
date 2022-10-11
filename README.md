@@ -72,6 +72,8 @@ Leaflet.css merupakan code stylesheet atau sebagai tampilan/ desain map. Sedangk
 
 **Langkah 5** : Masukan tile layer yang berisi base map/ citra yang akan digunakan. Pada Mapbox dapat dilakukan dengan mengisi access tokennya dengan access  token sebagai berikut
 ```html
+    <!DOCTYPE html>
+    <html>
     <head>
           <title>Peta Pertamaku</title>
           <link rel="stylesheet" href="../leaflet/leaflet.css"/>
@@ -91,9 +93,7 @@ Leaflet.css merupakan code stylesheet atau sebagai tampilan/ desain map. Sedangk
 ```
 
 **Langkah 6** : Double klik file “peta1.html” pada folder/ tempat penyimpanan yang telah diatur sebelumnya.
-```html
 
-```
 Berikut hasil dari baris kode pada browser:
 ![M1_1](https://user-images.githubusercontent.com/114122090/195171963-ccf578c7-d345-47f7-9c90-74ceec6a007d.png)
 
