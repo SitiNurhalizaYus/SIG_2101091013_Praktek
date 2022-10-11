@@ -118,6 +118,22 @@
 
     var hotelicon = new Leaflcon({iconUrl: 'images/hotel.png'})
 
+    var polygon = L.polygon([
+        [-0.960486, 100.353724], [-0.960341, 100.354652], [-0.957869, 100.357061], 
+        [-0.95685, 100.357791], [-0.956257, 100.358761], [-0.953514, 100.360849], 
+        [-0.95272, 100.359036], [-0.954243, 100.358059], [-0.955584, 100.3566], 
+        [-0.956539, 100.353735], [-0.958877, 100.353864],
+        ],{color: '#C3B091',fillOpacity: 0.35}).addTo(myMap).bindPopup('10 Lokasi Hotel terdekat.');
+
+    for (var i = 0; i < myLocation.length; i++) {
+        circle = new L.circle([myLocation[i][0], myLocation[i][1]],{
+            color: '#FADA5e', 
+            fillColor: '#FCF4A3', 
+            fillOpacity: 0.35, 
+            radius: 20})
+        .addTo(myMap).bindTooltip(myLocation[i][2]).bindPopup(myLocation[i][3]);
+    } 
+
     for (var i = 0; i < myLocation.length; i++) {
         markerMaps = new L.marker([myLocation[i][0], myLocation[i][1]],{icon: hotelicon}).addTo(myMap).bindTooltip(myLocation[i][2]).bindPopup(myLocation[i][3]);
     }     
