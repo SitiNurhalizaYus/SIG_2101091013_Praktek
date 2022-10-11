@@ -2,7 +2,7 @@
 Tutorial Latihan :
 - [Modul 1](README.md#modul-1) Maps API
 - [Modul 2](README.md#modul-2) Marker (Vector Point)
-- [Modul 3](README.md#modul-3)
+- [Modul 3](README.md#modul-3) Tooltip dan Pop Up (Info Window)
 - [Modul 4](README.md#modul-4)
 - [Modul 5](README.md#modul-5)
 
@@ -250,8 +250,8 @@ Berikut hasil dari baris kode pada browser:
         var myMap = L.map('map_pertama'). setView([-0.9243208769469531, 100.36247176394912],15);//kota padang
 
         var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		maxZoom: 19,
-		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	maxZoom: 19,
+	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	}).addTo(myMap);
 </script>
 </html>
@@ -273,8 +273,8 @@ Berikut hasil dari baris kode pada browser:
         var myMap = L.map('map_pertama'). setView([-0.9243208769469531, 100.36247176394912],15);//kota padang
 
         var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		maxZoom: 19,
-		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	maxZoom: 19,
+	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	}).addTo(myMap);
 
      L.marker([-0.9243208769469531, 100.36247176394912]).bindTooltip("Mesjid Raya Sumatera Barat").addTo(myMap);
@@ -287,8 +287,26 @@ Berikut hasil dari baris kode pada browser:
 **Langkah 3** : Buka file info.html dengan cara melakukan double click
 ![m3_1](https://user-images.githubusercontent.com/114122090/195180781-d2fccffc-b1f7-403d-83cc-ddbc7bbea159.png)
 
-## Tugas 2 :
+## Tugas 2 : Tampilkan PopUp pada sebuah marker
+**Langkah 1** : Lakukan langkah yang sama dengan pembuatan tooltip. Kemudian ubah bagian fungsi bindTooltip menjadi bindPopup.
 
+**Langkah 2** : Tambahkan kode HTML kedalam parameter bindPopup. Misal artikel mengenai Masjid Raya yang terdiri dari gambar _<img>_, embed youtube video _<iframe>_ dan paragraf sebuah artikel _<p>_.
+	
+**Langkah 3** : Tampilakan hasil dari kode tersebut.
+
+##Tugas 3 : Tampilkan Multi Tooltip atau Popup menggunakan array data
+**Langkah 1** : Lakukan langkah yang sama dengan pembuatan tooltip atau popup seperti tugas sebelumnya.
+	
+**Langkah 2** : Tambahkan Array Data seperti pada Modul 2 Tugas 2. Untuk tooltip dan popup Array yang tersimpan bertambah 2. Dari yang sebelumnya hanya latitude dan  longitude, dengan adanya penambahan tooltip dan popup, maka array bertambah memasukan informasi tooltip dan popup. Sehingga pada array/atribut myLocation terdiri dari 4 ruas/kolom.
+
+**Langkah 3** : Tambahkan Video Youtube pada informasi popup dengan cara melakukan click pada menu bagikan - embeded. Kemudian copy text embeded seperti berikut
+	
+**Langkah 4** : Paste code embede tersebut ke array ke 3 (atau kolom ke 4
+```html
+	
+```
+**Langkah 5** : Buka fiel kode tersebut dengan melakukan double click
+	
 ## Modul 4
 #
 ##
