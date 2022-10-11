@@ -14,8 +14,7 @@ Tutorial Latihan :
 
 **Langkah 2** : Download text editor Sublime Text pada alamat (https://www.sublimetext.com/3) atau Visual Code pada alamat (https://code.visualstudio.com/download)
 
-**Langkah 3** : Lakukan registrasi untuk mendapatkan private map API KEY di (https://account.mapbox.com/) . Fungsi dari private API KEY ini adalah sebagai kunci anda untuk customisasi peta pada domain atau aplikasi tertentu. Contoh API Key adalah (pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N 
-3gifQ.rJcFIG214AriISLbB6B5aw)
+**Langkah 3** : Lakukan registrasi untuk mendapatkan private map API KEY di (https://account.mapbox.com/) . Fungsi dari private API KEY ini adalah sebagai kunci anda untuk customisasi peta pada domain atau aplikasi tertentu. 
 
 **Langkah 4** : Download leafletJS dan extract file download tersebut. Hasil extract sebagai berikut. Perhatikan file leaflet.css dan leaflet.js
 
