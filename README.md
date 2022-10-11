@@ -231,9 +231,63 @@ Berikut hasil dari baris kode pada browser:
 
 
 ## Modul 3
-#
-##
-##
+# `Tooltip dan Pop Up (Info Window)`
+## Tugas 1 : Tampilkan tooltip pada sebuah marker
+**Langkah 1** : Buatlah 1 buah file html dengan nama info.html. Siapkan peta dasar dengan center view Kota Padang
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Menampilkan tooltip pada sebuah marker</title>
+        <link rel="stylesheet" type="text/css" href="../leaflet/leaflet.css"/>
+        <script type="text/javascript" src="../leaflet/leaflet.js"></script>
+    </head>
+<body>
+    <div id="map_pertama" style="width: 100%; height: 600px;"></div>
+</body>
+<script type="text/javascript">
+
+        var myMap = L.map('map_pertama'). setView([-0.9243208769469531, 100.36247176394912],15);//kota padang
+
+        var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(myMap);
+</script>
+</html>
+```
+**Langkah 2** : Tambahkan 2 buah marker yaitu Masjid Raya Sumtera Barat dan Kantor Gubernur. Tambahkan fungsi bindTootips(”String”) dan tambahkan informasi pada parameter fungsi tersebut sesuai informasi pada masing-masing marker.
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Menampilkan tooltip pada sebuah marker</title>
+        <link rel="stylesheet" type="text/css" href="../leaflet/leaflet.css"/>
+        <script type="text/javascript" src="../leaflet/leaflet.js"></script>
+    </head>
+<body>
+    <div id="map_pertama" style="width: 100%; height: 600px;"></div>
+</body>
+<script type="text/javascript">
+
+        var myMap = L.map('map_pertama'). setView([-0.9243208769469531, 100.36247176394912],15);//kota padang
+
+        var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(myMap);
+
+     L.marker([-0.9243208769469531, 100.36247176394912]).bindTooltip("Mesjid Raya Sumatera Barat").addTo(myMap);
+     L.marker([-0.9375940171064687, 100.36044269997706]).bindTooltip("Kantor Gubenur Sumatera Barat").addTo(myMap);
+
+</script>
+</html>
+```
+
+**Langkah 3** : Buka file info.html dengan cara melakukan double click
+![m3_1](https://user-images.githubusercontent.com/114122090/195180781-d2fccffc-b1f7-403d-83cc-ddbc7bbea159.png)
+
+## Tugas 2 :
 
 ## Modul 4
 #
