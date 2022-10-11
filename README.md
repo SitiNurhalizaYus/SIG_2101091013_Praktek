@@ -17,6 +17,7 @@ Tutorial Latihan :
 **Langkah 3** : Lakukan registrasi untuk mendapatkan private map API KEY di (https://account.mapbox.com/) . Fungsi dari private API KEY ini adalah sebagai kunci anda untuk customisasi peta pada domain atau aplikasi tertentu. 
 
 **Langkah 4** : Download leafletJS dan extract file download tersebut. Hasil extract sebagai berikut. Perhatikan file leaflet.css dan leaflet.js
+![lf](https://user-images.githubusercontent.com/114122090/195187843-00383e49-0b44-423e-a4c8-06011c462938.png)
 
 Leaflet.css merupakan code stylesheet atau sebagai tampilan/ desain map. Sedangkan leaflet.js berfungsi sebagai library JavaScript Map yang dapat menjalankan fungsi-fungsi API Map
 
