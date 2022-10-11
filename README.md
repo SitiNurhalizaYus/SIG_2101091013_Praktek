@@ -164,20 +164,83 @@ Berikut hasil dari baris kode pada browser:
 **Langkah 4** :Jalankan peta dengan melakukan double click file peta2.html
 ![m2_1](https://user-images.githubusercontent.com/114122090/195177821-22aabe46-c906-4efb-b148-9e68e04395ba.png)
 
+## Tugas 2 : Tampilkan 2 Marker atau lebih
+**Langkah 1** : Tambahkan fungsi marker sebanyak 2 atau lebih setelah marker sebelumnya.
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Marker</title>
+        <link rel="stylesheet" href="../leaflet/leaflet.css"/>
+        <script src="../leaflet/leaflet.js"></script>
+    </head>
+    <body>
+        <div id="mapku" style="width: 100%; height: 600px;"></div>
+    </body>
+    <script type="text/javascript">
+        var mymap = L.map('mapku').setView([-0.9142997125961476,100.46607589539128], 13);
+        
+        var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(mymap);
+
+        L.marker([-0.9142997125961476,100.46607589539128]).addTo(mymap);
+        L.marker([-0.9142997125961476,100.47607589539128]).addTo(mymap);
+    </script>  
+</html>
+```
+
+**Langkah 2** : Alternatif lainnya dengan menggunakan sistem array dan melakukan looping untuk proses pencetakan marker ke map. Kode multi marker menggunakan  looping array sebagai berikut.
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Marker</title>
+        <link rel="stylesheet" href="../leaflet/leaflet.css"/>
+        <script src="../leaflet/leaflet.js"></script>
+    </head>
+    <body>
+        <div id="mapku" style="width: 100%; height: 600px;"></div>
+    </body>
+    <script type="text/javascript">
+        var mymap = L.map('mapku').setView([-0.9142997125961476,100.46607589539128], 13);
+        
+        var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(mymap);
+
+        var locations = [[-0.9142997125961476,100.46607589539128],
+                         [-0.9142997125961476,100.47607589539128],
+                         [-0.9142997125961476,100.49607589539128],
+                         [-0.9142997125961476,100.45607589539128],
+                         [-0.9142997125961476,100.50607589539128]];
+                     
+        for (var i = 0; i < locations.length; i++) {
+            marker = new L.marker([locations[i][0], locations[i][1]]).addTo(mymap);
+        }
+    </script>  
+</html>
+```
+
+**Langkah 3** : Perhatikan array dari kode tersebut dan pemanggilannya pada looping. Terdiri dari array 1 dimensi dengn 2 ruas. Sehingga pemanggilan di looping sangat sederhana array 0 (latitude) dan array 1 (longitude).
+
+**Langkah 4** : Simpan dengan nama MultiMarker.html dan jalankan peta tersebut dengan melakukan double click pada file MultiMarker.html
+![m2_2](https://user-images.githubusercontent.com/114122090/195179286-bdd6a65a-c569-476c-9d9e-5ed1aa7118b9.png)
+
+
+## Modul 3
+#
 ##
 ##
 
-# Modul 3
-## 
+## Modul 4
+#
 ##
 ##
 
-# Modul 4
-## 
-##
-##
-
-# Modul 5
-## 
+## Modul 5
+#
 ##
 ##
