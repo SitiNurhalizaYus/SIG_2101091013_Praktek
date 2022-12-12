@@ -2,8 +2,8 @@
  require_once("db.php");
  $conn = new  connectToDB();
  $companies = $conn->getCompaniesList();
-//  $streets = $conn->getStreetsList();
-//  $areas = $conn->getAreasList();
+ $streets = $conn->getStreetsList();
+ $areas = $conn->getAreasList();
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,7 +17,7 @@
  <div id="map" style="width: 600px; height: 400px"></div>
  <script>
 
-const map = L.map('map').setView([51.505, -0.09], 13);
+const map = L.map('map').setView([-0.9137429958385986, 100.3863016659671], 5);
 
 const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
@@ -76,8 +76,8 @@ const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   }
   
   var companies = JSON.parse( '<?php echo json_encode($companies) ?>' );
-  //var streets = JSON.parse( '<//?php echo json_encode($streets) ?>' );
-  //var areas = JSON.parse( '<//?php echo json_encode($areas) ?>' );
+  var streets = JSON.parse( '<?php echo json_encode($streets) ?>' );
+  var areas = JSON.parse( '<?php echo json_encode($areas) ?>' );
  </script>
 </body>
 </html>
